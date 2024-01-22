@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class Dato {
@@ -21,21 +21,23 @@ class Dato {
   }
 }
 
-class MyApp  extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Temperatura',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Tabla de Datos'),
+          title: const Text('Tabla de Datos'),
         ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              MyDataTable(),
-              SizedBox(height: 20),
+              const MyDataTable(),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   // Lógica para copiar el objeto usando copia
@@ -52,7 +54,7 @@ class MyApp  extends StatelessWidget {
 
                   print('Copia del dato original: $copia');
                 },
-                child: Text('Copiar Objeto'),
+                child: const Text('Copiar Objeto'),
               ),
             ],
           ),
@@ -63,15 +65,17 @@ class MyApp  extends StatelessWidget {
 }
 
 class MyDataTable extends StatelessWidget {
+  const MyDataTable({super.key});
+
   @override
   Widget build(BuildContext context) {
     return DataTable(
-      columns: [
+      columns: const [
         DataColumn(label: Text('Ciudad')),
         DataColumn(label: Text('Fecha')),
         DataColumn(label: Text('Temperatura')),
       ],
-      rows: [
+      rows: const [
         DataRow(cells: [
           DataCell(Text('Chillan')),
           DataCell(Text('19/01/2024')),
