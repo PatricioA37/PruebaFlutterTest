@@ -23,7 +23,6 @@ class Dato {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -66,16 +65,15 @@ class MyApp extends StatelessWidget {
 
 class MyDataTable extends StatelessWidget {
   const MyDataTable({super.key});
-
   @override
   Widget build(BuildContext context) {
     return DataTable(
-      columns: const [
+      columns: const [ 
         DataColumn(label: Text('Ciudad')),
         DataColumn(label: Text('Fecha')),
         DataColumn(label: Text('Temperatura')),
       ],
-      rows: const [
+      rows: const [ 
         DataRow(cells: [
           DataCell(Text('Chillan')),
           DataCell(Text('19/01/2024')),

@@ -57,4 +57,21 @@ class MockRepository extends _i1.Mock implements _i3.Repository {
           ),
         )),
       ) as _i4.Future<_i2.Either<_i5.Failure, String>>);
+
+  @override
+  _i4.Future<_i2.Either<_i5.Failure, DateTime>> getCurrentDate(DateTime? date) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #getCurrentDate,
+          [date],
+        ),
+        returnValue: _i4.Future<_i2.Either<_i5.Failure, DateTime>>.value(
+            _FakeEither_0<_i5.Failure, DateTime>(
+          this,
+          Invocation.method(
+            #getCurrentDate,
+            [date],
+          ),
+        )),
+      ) as _i4.Future<_i2.Either<_i5.Failure, DateTime>>);
 }
