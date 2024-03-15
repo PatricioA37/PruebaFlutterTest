@@ -6,7 +6,7 @@ void main() {
     test('copia de dato', () {
       // Arrange
       final datoOriginal = Dato(ciudad: 'Chillan', fecha: DateTime.now(), temperatura: 31);
-
+    
       // Act
       final datoCopia = datoOriginal.copia();
 

@@ -6,3 +6,5 @@ abstract class Failure extends Equatable {
 }
 
 class RepositoryFailure extends Failure {}
+
+class LocalDataSourceFailure extends Failure {}
